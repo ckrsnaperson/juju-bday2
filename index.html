@@ -649,7 +649,7 @@ function begin(){
     setTimeout(()=>{
         showChoices([
             {text:"What do you mean?", action:r1},
-            {text:"And who are you?", action:r1}
+            {text:"That doesn't sound good", action:r1}
         ]);
     },14000);
 }
@@ -661,7 +661,7 @@ function r1(choiceText){
     choices.innerHTML="";
 
     setTimeout(()=>sendMsgWithTyping(
-        choiceText.includes("who")
+        choiceText.includes("good")
             ? "Straight to the point 😏"
             : "Curious, aren't you? 😄",
         "other", "707", "seven"
@@ -759,7 +759,7 @@ function finalScene(choiceText){
 
 
     setTimeout(()=>sendMsgWithTyping(
-        choiceText.includes("who")
+        choiceText.includes("about")
             ? "Yeah… it is."
             : "When are you not 😭",
         "other", "???", "me"
